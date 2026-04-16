@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.eggs/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Env files
+.env
+!.env.example
+
+# Local credentials / user roster
+users.txt
+!users.example.txt
+
+# Local SQLite + node_modules + vite output
+*.db
+node_modules/
+admin-ui/dist/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

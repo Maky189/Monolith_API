@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
+}
+button {
+  background: #2d7dd2; color: white; border: none; padding: 8px 14px;
+  border-radius: 4px; cursor: pointer; font-size: 14px;
+}
+button:hover { background: #246bb5; }
+button.danger { background: #c03030; }
+button.danger:hover { background: #a02020; }
+button.secondary { background: #3a3f4b; }
+input, select, textarea {
+  background: #1a1d24; color: #e6e6e6; border: 1px solid #2e333d;
+  padding: 8px; border-radius: 4px; font-size: 14px; width: 100%;
+}
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td {
+  padding: 8px 10px; border-bottom: 1px solid #232831; text-align: left;
+  font-size: 14px;
+}
+th { background: #1a1d24; color: #9aa3b2; font-weight: 600; }
+.login-container {
+  max-width: 360px; margin: 10vh auto; padding: 32px;
+  background: #181b22; border-radius: 8px; border: 1px solid #232831;
+}
+.login-container h1 { margin-top: 0; font-size: 20px; }
+.login-container label { display: block; margin: 12px 0 4px; font-size: 13px; color: #9aa3b2; }
+.console-shell { display: flex; min-height: 100vh; }
+.sidebar {
+  width: 220px; background: #13161c; border-right: 1px solid #232831; padding: 16px;
+}
+.sidebar h2 { font-size: 16px; margin: 0 0 16px; }
+.sidebar nav button {
+  display: block; width: 100%; text-align: left; background: transparent;
+  color: #e6e6e6; padding: 10px; border-radius: 4px; margin-bottom: 4px;
+}
+.sidebar nav button:hover { background: #1a1d24; }
+.sidebar nav button.active { background: #2d7dd2; }
+.main { flex: 1; padding: 24px; overflow-x: auto; }
+.main h1 { margin-top: 0; font-size: 22px; }
+.row { display: flex; gap: 8px; align-items: end; flex-wrap: wrap; }
+.row > * { flex: 1; min-width: 120px; }
+.error { color: #ff7676; margin: 8px 0; font-size: 13px; }
+.muted { color: #7a8393; font-size: 12px; }
+.bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }

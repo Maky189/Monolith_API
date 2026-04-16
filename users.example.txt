@@ -1,0 +1,9 @@
+# Outland dev accounts — keep this file OUT of git.
+# Format: <role>    <username>    <email>                <password>
+#
+# Roles: admin | engine_backend_dev | engine_dev | game_dev
+
+admin                 admin       admin@example.com       adminpass
+engine_dev            alice       alice@example.com       secret
+engine_backend_dev    bob         bob@example.com         secret
+game_dev              carol       carol@example.com       secret
