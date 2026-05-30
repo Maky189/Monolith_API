@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-import { Assignment, Binary, Game, Role, User } from '../models';
+import { Assignment, Binary, FileContent, Game, Role, TreeEntry, User } from '../models';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
@@ -88,5 +88,22 @@ export class ApiService {
 
   deleteBinary(token: string, id: number) {
     return firstValueFrom(this.http.delete(`/api/binaries/${id}`, { headers: this.headers(token) }));
+  }
+
+  listTree(token: string, path: string) {
+    const url = path ? `/api/fs/tree?path=${encodeURIComponent(path)}` : '/api/fs/tree';
+    return firstValueFrom(this.http.get<TreeEntry[]>(url, { headers: this.headers(token) }));
+  }
+
+  readFile(token: string, path: string) {
+    return firstValueFrom(
+      this.http.get<FileContent>(`/api/fs/file?path=${encodeURIComponent(path)}`, { headers: this.headers(token) })
+    );
+  }
+
+  writeFile(token: string, path: string, content: string) {
+    return firstValueFrom(
+      this.http.put<FileContent>('/api/fs/file', { path, content }, { headers: this.headers(token) })
+    );
   }
 }

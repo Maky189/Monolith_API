@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
   imports: [FormsModule],
   template: `
     <div class="login-container">
-      <h1>Outland Admin</h1>
+      <h1>Outland Engine</h1>
       <form (ngSubmit)="onSubmit()">
         <label>Email</label>
         <input type="email" [(ngModel)]="email" name="email" required autofocus />

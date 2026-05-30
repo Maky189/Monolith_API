@@ -34,3 +34,19 @@ export interface Binary {
   uploaded_by: number | null;
   created_at: string;
 }
+
+export interface TreeEntry {
+  name: string;
+  path: string;
+  is_dir: boolean;
+  access: 'none' | 'read' | 'write';
+  size: number | null;
+}
+
+export interface FileContent {
+  path: string;
+  content: string;
+  size: number;
+  mtime: number;
+  access: 'none' | 'read' | 'write';
+}
